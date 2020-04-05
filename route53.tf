@@ -3,4 +3,6 @@ resource "aws_route53_record" "bar1"{
  name = "bar1.bar.example.org"
  type = "CNAME"
  ttl = "300"  
- records = ["${aws_instance.bar1.public_dns}"]}
+ records = ["${aws_instance.bar1.public_dns}"]
+provider = "aws.route53"
+ }
